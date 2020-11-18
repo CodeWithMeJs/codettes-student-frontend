@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./Components/NavBar";
 import CodeInput from "./Pages/CodeInput";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -9,6 +10,11 @@ function Router() {
   return (
     <div>
       <BrowserRouter>
+        {(window.location.pathname.split("/")[1] === "home" ||
+          window.location.pathname.split("/")[1] === "blackboard" ||
+          window.location.pathname.split("/")[1] === "upload-assignment") && (
+          <Navbar />
+        )}
         <Switch>
           <Route path="/home">
             <Home />

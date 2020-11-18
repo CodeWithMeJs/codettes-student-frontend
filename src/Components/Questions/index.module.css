@@ -6,7 +6,6 @@
 }
 
 .main a {
-  display: flex;
   margin: 10px;
   background-color: #0e71eb;
   border-radius: 5px;
@@ -14,6 +13,4 @@
   padding: 10px 20px;
   color: white;
   text-decoration: none;
-  justify-content: space-between;
-  align-items: center;
 }

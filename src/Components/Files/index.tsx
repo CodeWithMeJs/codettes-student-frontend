@@ -42,7 +42,7 @@ export const Files = () => {
           {x.name}
           <span>
             <img
-              src={index === 0 ? TickGreen : TickRed}
+              src={x.checked === true ? TickGreen : TickRed}
               alt=""
               style={{ height: 20, width: 20 }}
             />

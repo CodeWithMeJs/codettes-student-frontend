@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import PastMeetings from "../../Components/PastMeetings";
 import styles from "./index.module.css";
-const socket = io("http://localhost:5000");
+
+const socketString: string =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const socket = io(socketString);
 
 function Home() {
   const [open, setOpen] = useState(false);
